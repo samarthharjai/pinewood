@@ -53,21 +53,23 @@ function resetForm() {
 
 function onEdit(td) {
     selectedRow = td.parentElement.parentElement;
-    document.getElementById("firstname").value = selectedRow.cells[0].innerHTML;
-    document.getElementById("lastname").value = selectedRow.cells[1].innerHTML;
-    document.getElementById("phonenumber").value = selectedRow.cells[2].innerHTML;
-    document.getElementById("city").value = selectedRow.cells[3].innerHTML;
-    document.getElementById("province").value = selectedRow.cells[4].innerHTML;
-    document.getElementById("postalcode").value = selectedRow.cells[5].innerHTML;
+    selectedRow.cells[0].innerHTML;
+    document.getElementById("firstname").value = selectedRow.cells[1].innerHTML;
+    document.getElementById("lastname").value = selectedRow.cells[2].innerHTML;
+    document.getElementById("phonenumber").value = selectedRow.cells[3].innerHTML;
+    document.getElementById("city").value = selectedRow.cells[4].innerHTML;
+    document.getElementById("province").value = selectedRow.cells[5].innerHTML;
+    document.getElementById("postalcode").value = selectedRow.cells[6].innerHTML;
 }
 
 function updateRecord(formData) {
-    selectedRow.cells[0].innerHTML = formData.firstname;
-    selectedRow.cells[1].innerHTML = formData.lastname;
-    selectedRow.cells[2].innerHTML = formData.phonenumber;
-    selectedRow.cells[3].innerHTML = formData.city;
-    selectedRow.cells[4].innerHTML = formData.province;
-    selectedRow.cells[5].innerHTML = formData.postalcode;
+    selectedRow.cells[0].innerHTML
+    selectedRow.cells[1].innerHTML = formData.firstname;
+    selectedRow.cells[2].innerHTML = formData.lastname;
+    selectedRow.cells[3].innerHTML = formData.phonenumber;
+    selectedRow.cells[4].innerHTML = formData.city;
+    selectedRow.cells[5].innerHTML = formData.province;
+    selectedRow.cells[6].innerHTML = formData.postalcode;
 }
 
 function onDelete(td) {
