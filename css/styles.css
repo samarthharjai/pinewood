@@ -4,7 +4,6 @@
 
 body {
     font-size:1.25rem;
-    background-color:black;
 }
 
 td {
@@ -31,12 +30,12 @@ a:hover{
   border: 0.40rem solid #f8f9fa;
   top: 10%;
 }
-/* .form-control{
-  background-color: #f8f9fa;
-  padding: 20px;
-  padding: 25px 15px;
-  margin-bottom: 1.3rem;
-} */
+
+.navbar-nav.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+}
 
 .form-control:focus {
 
@@ -48,20 +47,59 @@ a:hover{
 
 }
 
-/* .btn{
-  padding: 0.6rem 1.2rem;
-  background: #da5767;
-  border: 2px solid #da5767;
+table {
+  counter-reset: row-num -1 ;
+  text-align: center; 
 }
-.btn-primary:hover {
-
-    
-    background-color: #df8c96;
-    border-color: #df8c96;
-  transition: .3s;
-
+table tr {
+  counter-increment: row-num ;
+}
+table tr td:first-child::before {
+    content: counter(row-num) " ";
 }
 
-.navbar-brand img {
-  width: 140px;
-} */
+
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  
+  z-index: -1;
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+  z-index: 1000;
+  transition: all .5s;
+}
+
+.window {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+  
+  width: 800px;
+  height: 650px;
+  
+  transform: translate(-50%, -40%);
+}
+
+.show .popup {
+  transform: translate(-50%, -50%);
+  transition: all .5s;
+}
